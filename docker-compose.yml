@@ -19,7 +19,7 @@ services:
       DATABASE_PORT: 5432
       ADMIN_EMAILS: bekasmaciej@gmail.com
       ADMIN_NAMES: Maciej
-      ALLOWED_HOSTS: 127.0.0.1,gutendex
+      ALLOWED_HOSTS: 127.0.0.1,gutendex,localhost
       DEBUG: "false"
       EMAIL_HOST: your.smtp.host.here
       EMAIL_HOST_ADDRESS: gutendex@your.domain.here
@@ -29,6 +29,9 @@ services:
       MANAGER_NAMES: Someone
       MEDIA_ROOT: /var/www/gutendex/media/
       STATIC_ROOT: /var/www/gutendex/static-root/
+#    stdin_open: true # docker run -i
+#    tty: true
+
 
   gutendex:
     image: postgres:14.5
